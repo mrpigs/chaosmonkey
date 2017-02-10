@@ -5,7 +5,6 @@ language: go
 
 env:
   - DEPLOY_DOCS="$(if [[ $TRAVIS_BRANCH == 'master' && $TRAVIS_PULL_REQUEST == 'false' ]]; then echo -n 'true' ; else echo -n 'false' ; fi)"
-  - SITE_URL=http://netflix.github.io/chaosmonkey
 
 services:
     - docker
@@ -26,3 +25,6 @@ script:
     - go vet `go list ./... | grep -v /vendor/`
     - errcheck -ignore 'io:Close' -ignoretests `go list ./... | grep -v /vendor/`
     - go test -v -tags docker  ./...
+
+after_success:
+  - ./update-docs.sh
