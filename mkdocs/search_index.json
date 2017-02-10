@@ -1,0 +1,14 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Chaos Monkey\n\n\nEventually, this page will contain the proper documentation for Chaos Monkey.\n\n\nUntil then, see the \nwiki\n.",
+            "title": "Home"
+        },
+        {
+            "location": "/#chaos-monkey",
+            "text": "Eventually, this page will contain the proper documentation for Chaos Monkey.  Until then, see the  wiki .",
+            "title": "Chaos Monkey"
+        }
+    ]
+}
